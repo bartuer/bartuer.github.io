@@ -14,7 +14,9 @@ function addEvent(obj, eventName, listener) {
 
 addEvent(document, 'DOMContentLoaded', function () {
     var xd = document.getElementById('xd');
-    xd.contentWindow.postMessage("pop up portal", "*");
+    setTimeout(function () {
+        xd.contentWindow.postMessage("pop up portal", "*");                 
+    }, 2000);
     log('pop up portal window');
     addEvent(window, 'message', function (event) {
         log('pick result:'+event.data);
