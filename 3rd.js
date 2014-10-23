@@ -2,6 +2,7 @@ function log(content) {
     console.log(content);
     var pre = document.createElement('pre');
     pre.textContent = content;
+    document.body.appendChild(pre);
 }
 
 function addEvent(obj, eventName, listener) {
