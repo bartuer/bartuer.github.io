@@ -28,7 +28,7 @@ addEvent(document, 'DOMContentLoaded', function () {
         if (typeof data === "object" && data.type === 'ack') {
             var msg = {
                 payload : "pop up portal",
-                domain  : window.locaton.href
+                domain  : window.location.href
             };
             log('pop up portal window');
             xd.contentWindow.postMessage(JSON.stringify(msg), "*");                 
